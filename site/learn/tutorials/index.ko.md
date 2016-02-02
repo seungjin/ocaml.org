@@ -3,11 +3,8 @@
 
 # OCaml 튜토리얼
 
-#### 여러분의 도움을 필요로 합니다.
-Many of the tutorials below need updating and tutorials on many new
-topics are needed. Please contribute by visiting this project's repo on
-[GitHub](https://github.com/ocaml/ocaml.org); you may use the issue
-tracker there to request or offer new tutorials. Thanks!
+#### 여러분의 도움이 필요 합니다.
+아래의 튜토리얼들 중 많은 부분이 업데이트를 필요로 하거나 새로운 주제의 추가를 필요로 하고 있습니다. 본 프로젝트의 [GitHub](https://github.com/ocaml/ocaml.org) 저장소를 방문하시어 컨트리뷰션을 하실수 있습니다; 또한 새로운 튜토리얼에 대한 제안이나 요청에 대해서는 저장소의 이슈 트래커를 이용해주시면 됩니다. 감사합니다! 
 
 ((! get begin_two_columns !))
 
@@ -17,18 +14,17 @@ tracker there to request or offer new tutorials. Thanks!
 * 맵(Maps) (Dictionaries) - [en](map.html)
 * 셋(Sets) - [en](set.html)
 * 해쉬 테이블 - [en](hashtbl.html)
-* Comparison of Standard Containers - [en](comparison_of_standard_containers.html)
+* 기본 컨테이너들의 비교  - [en](comparison_of_standard_containers.html)
 * 데이타 타입과 매칭 — [en](data_types_and_matching.html)
-* [Pointers in OCaml](pointers.html)
-* 널 포인터, 어설트(Assert), 경고(Warning)
-  — [en](null_pointers_asserts_and_warnings.html)
+* OCaml 포인터 - [en](pointers.html)
+* 널 포인터, 어설트(Assert), 경고(Warning) — [en](null_pointers_asserts_and_warnings.html)
 * 함수형 프로그래밍 — [en](functional_programming.html)
 * [If 문, 루프, 재귀](if_statements_loops_and_recursion.ko.html)
 * 레이블 — [en](labels.html)
 * 일반 오류 메시지 — [en](common_error_messages.html)
 * OCaml 프로그래밍 스타일 — [en](guidelines.html)
-* [Formatting and Wrapping Text](format.html)
-* [99 Problems (solved) in OCaml](99problems.html)
+* 텍스트 포멧과 래핑- [en](format.html)
+* OCaml을 이용한 99문제 (풀이) - [en](99problems.html)
 * [OCamlbuild](ocamlbuild/)
 
 ((! get second_of_two_columns !))
@@ -41,22 +37,22 @@ tracker there to request or offer new tutorials. Thanks!
 * 포트란 라이브러리 호출하기 — [en](calling_fortran_libraries.html)
 * OCaml과 웹 — [en](ocaml_and_the_web.html)
 * 표준 라이브러리 예제 — [en](standard_library_examples.html)
-* [Setting up OCaml projects with OASIS](setting_up_with_oasis.html)
+* OASIS 이용하여 OCaml 프로젝트 세팅하기 - [en](setting_up_with_oasis.html)
 * OCaml 프로젝트 컴파일하기 — [en](compiling_ocaml_projects.html)
 * 명령행 인자 — [en](command-line_arguments.html)
 * 파일 조작 — [en](file_manipulation.html)
 * [Camlp4 3.10](camlp4_3.10/)
-* [Filenames and Extensions](filenames.html)
-* [Streams](streams.html)
-* [Stream Expressions](stream_expressions.html)
-* [_Acknowledgements_](../../contributors.html#Oldercontributorstothetutorials)
+* 파일 이름과 확장자 - [en](filenames.html)
+* 스트림 - [en](streams.html)
+* 스트림 익스프래션 - [en](stream_expressions.html)
+* [_감사의 말_](../../contributors.html#Oldercontributorstothetutorials)
 
 ((! get end_two_columns !))
 
 
 ## 외부 자료들
 
-###  Learn by Doing
+###  직접 따라하며 배우기
 
 * [Try OCaml Online](http://try.ocamlpro.com/) (by OCamlPro) allows
  you to immediately start learning OCaml in your browser, without
@@ -72,9 +68,9 @@ tracker there to request or offer new tutorials. Thanks!
  task in many languages. Currently there are few tasks with OCaml
  solutions provided, but perhaps you would like to add new solutions.
 
-###  Tutorials on OCaml
+###  OCaml 튜토리얼
 
-* [The OCaml System](http://caml.inria.fr/pub/docs/manual-ocaml/) (by
+* [OCaml 시스템](http://caml.inria.fr/pub/docs/manual-ocaml/) (by
  Inria) is the official user's manual. The first part provides an
  introduction to the core language, objects and classes, and modules.
  Previous versions are [here](http://caml.inria.fr/pub/docs/).
@@ -88,7 +84,7 @@ tracker there to request or offer new tutorials. Thanks!
  (by Thomas Fiscbacher), covers a broad sample of OCaml, from the
  basics to the C api.
 
-###  WikiBooks on OCaml
+###  WikiBooks에 있는 OCaml
 
 * [fr.wikibooks.org/wiki/OCaml](http://fr.wikibooks.org/wiki/OCaml)
  (in French):
@@ -97,7 +93,7 @@ tracker there to request or offer new tutorials. Thanks!
  (in French):
  The basics of the OCaml language.
 
-###  Tutorials on Tools
+###  도구들의 튜토리얼 모음
 There are also tutorials that can be useful to learn how to use popular
 tools and libraries.
 
@@ -131,6 +127,6 @@ with another language.
 
 ###  Advanced Tutorials & Articles
 
-* [Manual](http://caml.inria.fr/pub/docs/manual-ocaml/)
+* [메뉴얼](http://caml.inria.fr/pub/docs/manual-ocaml/)
 * [Detecting use cases for GADTs in OCaml](http://mads-hartmann.com/ocaml/2015/01/05/gadt-ocaml.html),
   (by Mads Hartmann), on using generalized algebraic data types in writing interpreters.
