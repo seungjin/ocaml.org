@@ -49,14 +49,14 @@ OPAM은 데비안에서 데비안 패키지를 관리하는 Mancoosi 프로젝�
 [이곳](https://github.com/thelema/odb)을 참고하기 바란다.
 
 ### ocamlbrew
-[이](https://github.com/hcarty/ocamlbrew)을 참고하기 바란다.
+[이곳](https://github.com/hcarty/ocamlbrew)을 참고하기 바란다.
 
 ## 리눅스 배포판
 
 OCaml은 대부분의 리눅스 배포본에서 패키지 메니저를 통해 직접 설치가 가능하다. 여기 대중적인 배포판을 기준으로한 설치 방법이 있다.
 
 ### 데비안
-OCaml은 [데바안](http://www.debian.org)에서 매우 손쉽게 설치가 가능하다.
+OCaml은 [데비안](http://www.debian.org)에서 매우 손쉽게 설치가 가능하다.
 
 ```
 apt-get install ocaml
@@ -77,108 +77,84 @@ apt-get install ocaml
 ### 우분투
 [우분투](http://www.ubuntu.com/)는 데비안의 변종으로 데비안과 같은 패키지 메니저를 이용한다. 따라서 데비안에서 설명한 설치 방법이 그대로 적용된다.
 
-You can view the list of OCaml packages in Ubuntu repositories
-[here](http://packages.ubuntu.com/search?keywords=ocaml).
+[우분투 저장소](http://packages.ubuntu.com/search?keywords=ocaml)에서 OCaml 패키지 리스트를 살펴볼수 있다.
 
-Ubuntu's official repositories often lag substantially behind the
-latest official releases of OCaml and OPAM. More recent versions are
-made available by Anil Madhavapeddy in his
-[PPAs](https://launchpad.net/~avsm). You can mimic the
-opam-repository's test
-[script](https://github.com/ocaml/opam-repository/blob/master/.travis-ci-install.sh)
-to add these PPAs on your own Ubuntu box. Please note PPAs are not
-reviewed at all by Ubuntu's security team and you are trusting the
-PPA's distributor by adding them to your system.
+때때로 우분투 공식 저장소가 OCaml과 OPAM 최신 정식 릴리즈보다 많이 뒤쳐져 있을때가 있다. 이럴땐 최신 버젼들을 Anil Madhavapeddy이 운영하는 그의 [PPAs](https://launchpad.net/~avsm) 찾을 수 있다. OPAM 저장소의 테스트 [스크립트](https://github.com/ocaml/opam-repository/blob/master/.travis-ci-install.sh)와 Anil Madhavapeddy의 PPAs를 여러분의 우분투 시스템에서 같이 이용할수 있다. PPAs는 우분투 보안팀에서 리뷰하지 않는 사실을 명심하기 바라며 여러분의 시스템에 PPA를 추가한다는 것은 해당 PPA를 여러분이 개인적인 결정으로 신뢰하기로 했다는 것을 알아두기로 하자. 
 
 ### 페도라
-Since [Fedora 8](http://fedoraproject.org/), Fedora has excellent
-support for OCaml in the basic distribution. There is an active group of
-maintainers who keep up to date with the latest OCaml, and there is a
-wide range of packages available.
+[페도라 8](http://fedoraproject.org/)부터, 페도라는 OCaml을 기본 배포판에 적극 지원 하기 시작했다. 최신 OCaml 버젼을 업데이트 해주는 활발한 활동을 하는 페도라 사용자 그룹이 있으며 다양한 종류의 패키지를 지원하고 있다.
 
-To install the OCaml compiler just do:
-
+OCaml 컴파일러를 설치 하기 위해서는 다음과 같이 한다:
 ```bash
 yum install ocaml
 ```
-To install an OCaml library called '`foo`', and any dependencies it
-needs, you would do:
+'`foo`'라 불리는 Ocaml 라이브러리와 이에 필요한 의존성을 전부 설치하고자 한다면 다음을 실행하면 된다.
 
 ```bash
 yum install ocaml-foo-devel
 ```
-A good set of basic development libraries can be installed by doing:
+다음을 실행함으로서 개발 환경을 위한 여러 라이브러리들을 설치 할 수 있다:
 
 ```bash
 yum install ocaml-camlp4-devel ocaml-ocamldoc ocaml-findlib-devel \
    ocaml-extlib-devel ocaml-calendar-devel
 ```
-To list all OCaml packages use:
+OCaml 페키지들 전부를 보고 싶다면 다음을 실행하면 된다:
 
 ```bash
 yum search ocaml
 ```
-**Packaging policy and mailing lists**
+**패키징 규칙과 메일링 리스트**
 
-* [OCaml packaging
- policy](http://fedoraproject.org/wiki/Packaging/OCaml) in Fedora.
- All Fedora OCaml packages have to obey this policy, ensuring a
- minimum standard for all OCaml packages we ship.
-* [OCaml Special Interest
- Group](http://fedoraproject.org/wiki/SIGs/OCaml).
-* [fedora-ocaml-list](https://lists.fedoraproject.org/mailman/listinfo/Ocaml-devel):
- mailing list for people interested in OCaml on Fedora or Red Hat
- Enterprise Linux.
 
-### Gentoo
-In order to get the basic tools under
-[Gentoo](http://www.gentoo.org/), execute:
+* 페도라의 [OCaml 패키징 규칙](http://fedoraproject.org/wiki/Packaging/OCaml). 모든 페도라 OCaml 패키지들은 이 규칙을 따라야만 하며 배포되는 모든 OCaml 패키지들은 이러한 표준을 따르고 있다. 
+* [OCaml Special Interest Group](http://fedoraproject.org/wiki/SIGs/OCaml).
+* [fedora-ocaml-list](https://lists.fedoraproject.org/mailman/listinfo/Ocaml-devel): 페도라, 래드햇 엔터프라이즈 리눅스상에서 OCaml의 이용에 관심이 있는 사람들 모임의 메일링 리스트.
 
+### 젠투(Gentoo)
+[젠투](http://www.gentoo.org/)에서 기본 툴들을 설치 하려면 `portage` 그룹(e.g._root)의 멤머인 유저로 로그인 상태에서
 ```bash
 emerge ocaml  
 ```
+다른 어떤 패키지들이 실행 가능한지 알아보려면: 
 while being logged in as a user that is a member of the `portage` group
-(e.g. root). If you want to see what other related packages are
-available execute
+(e.g. root).
 
 ```bash
 emerge -S ocaml 
 ```
 
 ### 수세리눅스
-OCaml can be installed from the repositories on both OpenSuSE and SLES:
+OpenSuSE와 SLES 의 저장소 모두에서 OCaml을 설치 할수 있다:
 
 ```
 zypper install ocaml
 ```
 
 ### Mageia
-[Mageia](http://www.mageia.org/) has some support for OCaml in the
-distribution.
+[Mageia](http://www.mageia.org/) 배포본에서 OCaml을 지원하고 있다.
 
-To install the OCaml compilers just do:
+OCaml 컴파일러를 설치 하기 위해서는:
 
 ```bash
 urpmi ocaml-compiler
 ```
-ocaml-compiler has no dependency on X11 libs, to install the libs that
-have some (for example the module Graphics):
+이렇게 설치 되는 ocaml-compiler는 X11 라이브러리에 대한 의존성이 없는 컴파일러이며 만약 module Graphic와 같은 X11 라이브러리에 의존적인 컴파일러를 설치 하려면:
 
 ```bash
 urpmi ocaml-x11
 ```
-To install camlp4:
+camlp4를 설치하려면:
 
 ```bash
 urpmi camlp4
 ```
-To install an OCaml library called '`foo`', and any dependencies it
-needs, you would do:
+'`foo`'라는 OCaml 라이브러와 필요한 관련 의존성을 설치 하기 위해서는 다음과 같이 할 수 있다: 
 
 ```bash
 urpmi ocaml-foo-devel
 ```
-A good set of basic development libraries can be installed by doing:
+다음을 실행함으로서 기본적인 개발 라이브러리 환경을 설치 할 수 있다: 
 
 ```bash
 urpmi camlp4-devel ocaml-doc ocaml-findlib-devel \
@@ -186,37 +162,29 @@ urpmi camlp4-devel ocaml-doc ocaml-findlib-devel \
   ocaml-ounit-devel ocaml-sexplib-devel ocaml-xml-light-devel \
   ocamlmakefile
 ```
-To list OCaml packages, use:
+OCaml 패키지 리스트를 확인 하려면:
 
 ```bash
 urpmq --list | grep ocaml
 ```
-**Packaging policy**
+**패키지 규칙**
 
-* [OCaml packaging policy](https://wiki.mageia.org/en/OCaml_policy) in
- Mageia. All Mageia OCaml packages have to obey this policy, ensuring
- a minimum standard for all OCaml packages we ship.
+* Mageia의 [OCaml 패키지 규칙](https://wiki.mageia.org/en/OCaml_policy). 모든 Mageia OCaml 패키지들은 이 규칙을 따라야만 하며 배포되는 모든 OCaml 패키지들은 이러한 표준을 준수 하고 있다.
 
-## Windows
+## 윈도우즈
 
-Under Windows, two solutions are available to use OCaml: the official
-OCaml distribution relies on Cygwin, while OCamlPro provides OCPWin, a
-binary distribution working without Cygwin.
+윈도우즈상에서는 다음의 두가지 방법으로 OCaml을 이용할 수 있다: ygwin을 필요로 하는 OCaml 공식 배포버젼과 OCamlPro에서 제공하는 Cygwin 없이 실행 가능한 바이너리 배포버젼인 OCPWin을 이용할수 있다.
 
-### OCaml on Cygwin
+### Cygwin에서 OCaml 이용하기
 
-Three ports of OCaml for Microsoft Windows are currently available. For
-additional information, please consult the list of [portability
-issues](/learn/portability.html) or the [Windows release
-notes](http://caml.inria.fr/pub/distrib/ocaml-4.00/notes/README.win32).
+현재 세가지 버젼의 마이크로소프트 윈도우즈용 OCaml이 이용 가능하다. 자세한 사항은 [이식성 관련 이슈](learn/poratability.html)의 리스트나 [윈도우 릴리즈 노트](http://caml.inria.fr/pub/distrib/ocaml-4.00/notes/README.win32)를 참고하기 바란다. 
 
-* [Cygwin-based native Win32 port
- (4.00.1)](http://protz.github.io/ocaml-installer/). A self
+* [Cygwin 기반 네이티브 Win32 포트 (4.00.1)](http://protz.github.io/ocaml-installer/). A self
  installer. The interactive loop comes with a simple graphical user
  interface. Some features require the Cygwin environment, which the
  installer can fetch for you. However, the compilers are true Win32 executables,
  and binaries they generate do not require Cygwin to run too.
-* Microsoft-based native Win32 ports. No binary distributions
+* 마이크로소프트 기반 네이티브 Win32 포트. No binary distributions
  available yet; download the source distribution and compile it. Build
  instructions including required tools (Cygwin required) and download
  links in the source distribution (README.win32).
@@ -230,7 +198,7 @@ notes](http://caml.inria.fr/pub/distrib/ocaml-4.00/notes/README.win32).
       configuration setup (may affect interaction with github
       projects). See [this page](http://superuser.com/questions/397288/using-cygwin-in-windows-8-chmod-600-does-not-work-as-expected)
       for a suggested workaround.
-* [Cygwin](http://cygwin.com/)-based port. Requires Cygwin. No
+* [Cygwin](http://cygwin.com/)기반 포트. Requires Cygwin. No
  graphical user interface is provided. The compilers generate
  executables that do require Cygwin. The precompiled binaries are
  part of the Cygwin distribution; you can install them using the
@@ -240,7 +208,7 @@ notes](http://caml.inria.fr/pub/distrib/ocaml-4.00/notes/README.win32).
 To install libraries, you may use
 [Wodi](http://wodi.forge.ocamlcore.org/) or OPAM.
 
-### OCPWIN, Self-Contained OCaml for Windows
+### OCPWIN, 윈도우즈 용 OCaml 독자 바이너리 
 
 OCPWin is a self-contained binary
 distribution of OCaml for
@@ -254,7 +222,7 @@ been added to OCaml for better support of Windows.
 
 *Note: The link for OCPWin has been removed due to an issue waiting to be solved.*
 
-## Mac OS X
+## 맥 OS X
 On Mac OS X, there are, at least for the base package, a few different
 ways to go: Install Homebrew package management system and use OPAM (recommeneded); Install via Fink;
 Install via MacPorts; or build it manually from
@@ -262,7 +230,7 @@ sources. For each of these approaches, you will need to have at least
 the OS X developer tools installed — any other requirements will be
 discussed below.
 
-###  Inria's binary package
+###  Inria의 바이너리 패키지
 
 [Inria stopped supporting MacOS binaries for OCaml 4.02.X](http://caml.inria.fr/download.en.html).
 For earlier versions of OCaml  Intel disk image images follow the [download](../releases/) link.
@@ -292,7 +260,7 @@ OCaml package manager, which will give you access to all its
 brew install opam
 ```
 
-###  Fink
+###  핑크(Fink)
 [Fink](http://fink.sourceforge.net/ "Fink") is the most prevalent
 package management system for OS X, and is based on Debian's package
 management system. Fink can be installed by downloading and building the
@@ -318,7 +286,7 @@ It is likely that Fink will need to download and install a number of
 other packages required to build the OCaml packages, but this will occur
 mostly automatically.
 
-### MacPorts
+### 맥포트(MacPorts)
 [MacPorts](http://www.macports.org/), formerly known as DarwinPorts, is
 a package management system for Mac OS X based on the BSD ports system.
 You will need to have the OS X Developer Tools installed before
