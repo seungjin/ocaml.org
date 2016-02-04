@@ -179,48 +179,24 @@ urpmq --list | grep ocaml
 
 현재 세가지 버젼의 마이크로소프트 윈도우즈용 OCaml이 이용 가능하다. 자세한 사항은 [이식성 관련 이슈](learn/poratability.html)의 리스트나 [윈도우 릴리즈 노트](http://caml.inria.fr/pub/distrib/ocaml-4.00/notes/README.win32)를 참고하기 바란다. 
 
-* [Cygwin 기반 네이티브 Win32 포트 (4.00.1)](http://protz.github.io/ocaml-installer/). A self
- installer. The interactive loop comes with a simple graphical user
- interface. Some features require the Cygwin environment, which the
- installer can fetch for you. However, the compilers are true Win32 executables,
- and binaries they generate do not require Cygwin to run too.
-* 마이크로소프트 기반 네이티브 Win32 포트. No binary distributions
- available yet; download the source distribution and compile it. Build
- instructions including required tools (Cygwin required) and download
- links in the source distribution (README.win32).
-  - Configurations supported include 32-bit/64-bit;
-  - Microsoft toolset support provided by Windows 7 SDK;
-  - Tested with XP/Windows 7/Windows 8.1.
-  - On Windows 8.1
-    - Cygwin chmod 0600 appears broken : comment L367 of Makefile.nt
-       (@chmod -w utils/config.ml);
-    - This same problem with Cygwin chmod also affects ssh
-      configuration setup (may affect interaction with github
-      projects). See [this page](http://superuser.com/questions/397288/using-cygwin-in-windows-8-chmod-600-does-not-work-as-expected)
-      for a suggested workaround.
-* [Cygwin](http://cygwin.com/)기반 포트. Requires Cygwin. No
- graphical user interface is provided. The compilers generate
- executables that do require Cygwin. The precompiled binaries are
- part of the Cygwin distribution; you can install them using the
- Cygwin `setup` tool. Alternatively, download the source distribution
- and compile it under Cygwin.
+* [Cygwin 기반 네이티브 Win32 포트 (4.00.1)](http://protz.github.io/ocaml-installer/). 설치파일 제공. 간단한 그래픽 유저 인터페이스를 포함하는 대화형 화면 지원. 일부 기능은 Cygwin 환경을 필요로 함 (인스톨러에 포함). 컴파일러는 Win32 실행 파일로 생성되는 바이너리는 그 실행을 위해 Cygwin 환경을 필요로 하지 않음. 
+* 마이크로소프트 기반 네이티브 Win32 포트. 바이너리 파일을 아직 지원 하지 않음; 소스를 다운하여 컴파일 하여야 함. 배포되는 소스에 필요한 툴들(Cygwin 요구)과 다운 받을수 있는 링크 그리고 설명이 있음 (README.win32).
+  - 32비트/64비트를 지원하는 설정;
+  - 윈도우즈 7 sdk를 이용한 마이크로소프트 툴셋 제공;
+  - XP/Windows 7/Windows 8.1에서 테스트 됨.
+  - 윈도우즈 8.1에서
+    - Cygwin chmod 0600 appears broken : comment L367 of Makefile.nt (@chmod -w utils/config.ml);
+    - This same problem with Cygwin chmod also affects ssh configuration setup (may affect interaction with github projects). See [this page](http://superuser.com/questions/397288/using-cygwin-in-windows-8-chmod-600-does-not-work-as-expected) for a suggested workaround.
+* [Cygwin](http://cygwin.com/)기반 포트. Cygwin이 필요. 그래픽 유저 인터페이스는 제공되지 않음. 컴파일러가 생성하는 실행파일은 Cygwin을 필요로 함.
+ 프리컴파일 바이너리는 Cygwin distribution의 일부분임; Cygwin의 `setup`툴을 이용하여 설치 할수 있음. 다른 방법으로 소스를 다운받아 Cygwin에서 컴파일 할수 있음.
 
-To install libraries, you may use
-[Wodi](http://wodi.forge.ocamlcore.org/) or OPAM.
+라이브러리를 설치 하려면 [wodi](http://wodi.forge.ocamlcore.org/)나 OPAM을 이용하면 됨. 
 
 ### OCPWIN, 윈도우즈 용 OCaml 독자 바이너리 
 
-OCPWin is a self-contained binary
-distribution of OCaml for
-Windows. It supports both 32-bit and 64-bit Windows platforms, and can
-compile both bytecode and native code applications, directly from a
-Windows terminal, without installing other software. The license
-agreement allows both commercial and non-commercial use, as long as
-the compiler parts themselves are not redistributed. A binary
-installer is provided for OCaml 4.01.0. Some additional features have
-been added to OCaml for better support of Windows.
+OCPWin은 (독립된) 윈도우즈용 바이너리 설치 파일이다. 32비트와 64비트 윈도우즈 플랫폼 둘다를 지원하며 바이트코드와 네이티브 코드 어플리케이션 둘다를 다른 추가적인 소프트웨어 설치 없이 바로 윈도우즈 터미널에서 컴파일 할수 있다. 컴파일러 일부분이 재배포 되지 않는 이상 사용과 비상용 이용에 대한 라이센스를 둘다 지원한다. 바이너리 인스톨러는 OCaml 4.01.0을 제공하고 있다. 윈도우즈 지원을 위한 편리한 추가적인 기능들이 OCaml에 포함 되어 있다.    
 
-*Note: The link for OCPWin has been removed due to an issue waiting to be solved.*
+*알림: OCPWin의 링크는 현재 OCPWin으 문제로 인하여 삭제 되어있으며 문제가 해결되기를 기다리고 있다.* 
 
 ## 맥 OS X
 On Mac OS X, there are, at least for the base package, a few different
